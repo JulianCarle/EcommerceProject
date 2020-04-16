@@ -9,8 +9,9 @@ import {
 
 import './checkout-item.styles.scss';
 
-const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
+const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem, ...otherprops }) => {
   const { name, imageUrl, price, quantity } = cartItem;
+  console.log('otherprops', otherprops)
   return (
     <div className='checkout-item'>
       <div className='image-container'>
