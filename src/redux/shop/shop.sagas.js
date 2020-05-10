@@ -15,7 +15,6 @@ export function* fetchCollectionsStart(){
 
 export function* fetchCollectionsAsync(){
     try{
-        yield console.log('iam fired')
         const collectionRef = firestore.collection('collections')
         const snapshot = yield collectionRef.get()
         const collectionsMap = yield call(
